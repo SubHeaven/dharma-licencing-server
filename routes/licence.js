@@ -42,6 +42,10 @@ router.get("/", function (req, res, next) {
                     if (empresas[c].inicial) {
                         empresas[c].mac = m;
                         empresas[c].inicial = false;
+                        fs.writeFileSync(
+                            "empresas.json",
+                            JSON.stringify(empresas, null, 4)
+                        );
                     } else {
                         r.message = "Não autorizado!";
                     }
