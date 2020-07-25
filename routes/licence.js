@@ -24,6 +24,10 @@ router.get("/", function (req, res, next) {
         m.push(k[0].slice(24, 26));
         m = m.join(":");
         c = `${k[0].slice(4, 11)}${k[0].slice(15, 22)}${k[0].slice(26)}`;
+        console.log("");
+        console.log("**************************************************");
+        console.log(m);
+        console.log(c);
         var mk = crypto.createDecipher(
             "aes-128-cbc",
             "Theres no place like home"
